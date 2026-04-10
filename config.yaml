@@ -1,7 +1,7 @@
-path: ~/Dev/b/yolo/lab5-dat301m-dataset-praparing/ # absolute path to dataset
-test: lab5-dat301m-dataset-praparing/train/images # relative path to test images
-train: lab5-dat301m-dataset-praparing/train/images # relative path to training images
-val: lab5-dat301m-dataset-praparing/val/images # relative path to validation images
+path: /home/aegis/Dev/b/yolo/datasets # absolute path to dataset
+test: test/images # relative path to test images
+train: train/images # relative path to training images
+val: val/images # relative path to validation images
 
 # classes
 names:
