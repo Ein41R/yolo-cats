@@ -6,3 +6,6 @@ __pycache__/
 datasets
 runs/
 detect
+images
+New Folder
+*.pt
