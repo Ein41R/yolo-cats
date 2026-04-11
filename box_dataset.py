@@ -19,7 +19,7 @@ def yolo_to_xyxy(x_center, y_center, width, height, image_w, image_h):
 	return x1, y1, x2, y2
 
 
-def draw_boxes_on_dataset(base_dir="dataset/trains"):
+def draw_boxes_on_dataset(base_dir="datasets/train"):
 	images_dir = os.path.join(base_dir, "images")
 	labels_dir = os.path.join(base_dir, "labels")
 	output_dir = os.path.join(base_dir, "images_with_boxes")
@@ -60,7 +60,7 @@ def draw_boxes_on_dataset(base_dir="dataset/trains"):
 					w,
 					h,
 				)
-				draw.rectangle([(x1, y1), (x2, y2)], outline="red", width=2)
+				draw.rectangle([(x1, y1), (x2, y2)], outline="red", width=4)
 
 		out_path = os.path.join(output_dir, image_name)
 		image.save(out_path)
