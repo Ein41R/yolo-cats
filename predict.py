@@ -3,7 +3,7 @@ import os
 
 from ultralytics import YOLO
 
-model = YOLO("best.pt")
+model = YOLO("last.pt")
 
 dir = input("chooose imageset: (default=d/t/images), (1=d/t/images), (2=images/cat images)")
 
@@ -14,9 +14,14 @@ if dir == "2":
 else:
     images = os.listdir("datasets/train/images")
     path = "datasets/train/images"
+print(f"found {len(images)} images in {path}\n")
 
+sample_size = input(f"how many images to predict? (default=10)")
+try:
+    sample_size = int(sample_size)
+except Exception:
+    sample_size = 10
 
-sample_size = input(f"how many images to predict (max: {len(images)})? (default=10)")
 
 for image in images[0:int(sample_size)]:
     source = os.path.join(path, image)
