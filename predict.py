@@ -3,7 +3,7 @@ import os
 
 from ultralytics import YOLO
 
-model = YOLO("last.pt")
+model = YOLO("dalast.pt")
 
 dir = input("chooose imageset: (default=d/t/images), (1=d/t/images), (2=images/cat images)")
 
