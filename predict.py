@@ -11,6 +11,7 @@ else:
 
 num = input(f"enter train number (default=runs/detect/train/weights/{version}): ")
 model = YOLO(f"runs/detect/train{num}/weights/{version}")
+print(f"model loaded from runs/detect/train{num}/weights/{version}\n")
 
 dir = input("chooose imageset: (default=d/t/images), (1=d/t/images), (2=images/cat images)")
 
