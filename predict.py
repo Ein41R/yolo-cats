@@ -3,7 +3,14 @@ import os
 
 from ultralytics import YOLO
 
-model = YOLO("dalast.pt")
+version = input("enter model version (default=best) (2=last): ")
+if version == "2":
+    version = "last.pt"
+else:
+    version = "best.pt"
+
+num = input(f"enter train number (default=runs/detect/train/weights/{version}): ")
+model = YOLO(f"runs/detect/train{num}/weights/{version}")
 
 dir = input("chooose imageset: (default=d/t/images), (1=d/t/images), (2=images/cat images)")
 
