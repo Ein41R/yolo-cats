@@ -14,3 +14,5 @@ tried switching the base model,
 questioned wheter I used a pretrained model or training a model from scratch.
 
 Checked logs, found that label classes were corrupted, some with 0 (cat) and 25 (undefined). manually fixed dataset.
+
+unfortunatel switched 0 to 25 but 0-0 class indicies are needed for single class dataset
