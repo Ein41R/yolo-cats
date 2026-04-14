@@ -5,4 +5,4 @@ val: val/images # relative path to validation images
 
 # classes
 names:
-  0:  cat
+  25:  cat
