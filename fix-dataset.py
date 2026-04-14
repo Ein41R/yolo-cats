@@ -1,13 +1,22 @@
 import os
+from sys import argv
 
 exception_list = []
 
-#label_path = "dataset/labels/"
-label_path = "mock-data/labels"
+for option in argv:
+    if option.startswith("--path="):
+        label_path = option.split("=")[1]
+    else:
+        label_path = "datasets/train/labels"
 
-labels = os.listdir(label_path)
+print(f"Processsing labels in {label_path}...")
+input("Press Enter to continue...")
+
+labels = sorted(os.listdir(label_path))
+
 for label in labels:
     label_file = os.path.join(label_path, label)
+    #print(f"Fixing: {label_file}...")
     with open(label_file, "r") as f:
         lines = f.readlines()
         new_lines = []
@@ -23,4 +32,11 @@ for label in labels:
 
         with open(label_file, "w") as fi:
             fi.writelines(new_lines)
-        f.close
+        f.close()
+
+print(f"Processed {len(labels)} labels. {len(exception_list)} exceptions found.")
+print("Writing exceptions to exceptions.txt...")
+with open("exceptions.txt", "w") as f:
+    for exception in exception_list:
+        f.write(exception + "\n")
+print("Done.")
