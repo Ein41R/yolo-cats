@@ -4,7 +4,7 @@ from sys import argv
 exception_list = []
 
 for option in argv:
-    if option.startswith("--path="):
+    if option.startswith("--path=")f:
         label_path = option.split("=")[1]
     else:
         label_path = "datasets/train/labels"
@@ -24,7 +24,7 @@ for label in labels:
             if line.startswith("25 "):
                 #overwrite to 0 
                 f.close()
-                
+                s
                 new_lines.append(line.replace("25 ", "0 "))
             else:
                 new_lines.append(line)
