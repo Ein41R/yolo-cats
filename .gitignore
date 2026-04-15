@@ -9,5 +9,5 @@ runs/
 detect
 images
 New Folder
-*.pt
+yolov8n.pt
 mock-data
