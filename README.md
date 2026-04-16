@@ -21,8 +21,8 @@ It was at this moment, where I found out about [jones139](https://github.com/jon
 
 Results
 =======
-[Result stats](train2/results.png)
-[Training Batch](train2/train_batch0.jpg)
+![Result stats](train2/results.png)
+![Training Batch](train2/train_batch0.jpg)
 
 
 TODO
