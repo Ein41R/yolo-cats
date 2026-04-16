@@ -23,8 +23,3 @@ Results
 =======
 ![Result stats](train2/results.png)
 ![Training Batch](train2/train_batch0.jpg)
-
-
-TODO
-====
-- add proper visuals to the documentation
