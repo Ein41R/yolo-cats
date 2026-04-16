@@ -19,6 +19,12 @@ After writing a script to adjust the dataset labeling, I ran a total of 221 Epoc
 
 It was at this moment, where I found out about [jones139](https://github.com/jones139)'s [catocam project](https://github.com/jones139/catocam/tree/main), which lead to me orphaning this repo.
 
+Results
+=======
+[Result stats](train2/results.png)
+[Training Batch](train2/train_batch0.jpg)
+
+
 TODO
 ====
 - add proper visuals to the documentation
